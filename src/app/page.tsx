@@ -6,6 +6,8 @@ import playIcon from "@/public/icons/playIcon.svg";
 import leftIcon from "@/public/icons/left-arrow.svg";
 import rightIcon from "@/public/icons/right-arrow.svg";
 import cat_img1 from "@/public/images/cat_img.jpg";
+import cat_img2 from "@/public/images/cat_img2.png";
+import cat_img3 from "@/public/images/cat_img3.png";
 import { CategoryCard } from "../components/category/CategoryCard";
 
 export default function Home() {
@@ -32,44 +34,47 @@ export default function Home() {
         </div>
       </div>
       {/* Second Section */}
-      <div className="px-14 pt-32 flex justify-between items-center">
-        <div className="px-14 pt-32 flex justify-between items-center">
+      <div className="px-14 pt-32 flex flex-col gap-14 w-full">
+        <div className="flex justify-between items-center">
+          <TextArea
+            text="Explore our wide variety of categories"
+            subText="Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new"
+          />
 
+          <div className="flex w-60 justify-between items-center p-2 rounded-lg bg-black-06 border border-black-12">
+            <div className="bg-black-10 border border-black-12 flex justify-center items-center p-2 cursor-pointer">
+              <span>
+                <Image src={leftIcon} alt="left-arrow" />
+              </span>
+            </div>
+
+            <div className="flex  justify-between">
+              {[...Array(4)].map((_, index) => (
+                <div
+                  className={`rounded-2xl ${
+                    index === 0 ? "bg-red-45" : "bg-black-20"
+                  }  border w-8 h-2 p-px`}
+                  key={index}
+                ></div>
+              ))}
+            </div>
+
+            <div className="bg-black-10 border border-black-12 flex justify-center items-center p-2 cursor-pointer">
+              <span>
+                <Image src={rightIcon} alt="left-arrow" />
+              </span>
+            </div>
+          </div>
         </div>
-        <TextArea
-          text="Explore our wide variety of categories"
-          subText="Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new"
-        />
-        <div className="flex w-60 justify-between items-center p-2 rounded-lg bg-black-06 border border-black-12">
-          <div className="bg-black-10 border border-black-12 flex justify-center items-center p-2 cursor-pointer">
-            <span>
-              <Image src={leftIcon} alt="left-arrow"  />
-            </span>
-          </div>
-
-          <div className="flex  justify-between">
-            {
-              [...Array(4)].map((_, index) =>(
-                <div className={`rounded-2xl ${index === 0 ? "bg-red-45" : "bg-black-20" }  border w-8 h-2 p-px`} key={index}></div>
-              ))
-            }
-          </div>
-
-          <div className="bg-black-10 border border-black-12 flex justify-center items-center p-2 cursor-pointer">
-            <span>
-              <Image src={rightIcon} alt="left-arrow"  />
-            </span>
-          </div>
-        </div>
+        <div className="flex  gap-3">
+        <CategoryCard categoryName="Action" imgSrc={cat_img1} />
+        <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
+        <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
+        <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
+        <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
       </div>
-      <div className="grid grid-cols-5 px-14">
-        <CategoryCard categoryName="Action" imgSrc={cat_img1} />
-        <CategoryCard categoryName="Action" imgSrc={cat_img1} />
-        <CategoryCard categoryName="Action" imgSrc={cat_img1} />
-        <CategoryCard categoryName="Action" imgSrc={cat_img1} />
-        <CategoryCard categoryName="Action" imgSrc={cat_img1} />
-
       </div>
+      
     </div>
   );
 }
