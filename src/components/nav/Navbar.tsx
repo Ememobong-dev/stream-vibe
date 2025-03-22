@@ -54,10 +54,10 @@ export const Navbar = () => {
         </div>
         <div className="flex gap-3 items-center">
           <span>
-            <Image src={searchIcon} className="cursor-pointer" alt="brand_logo" />
+            <Image src={searchIcon} className="cursor-pointer w-7" alt="brand_logo" />
           </span>
           <span>
-            <Image src={notiicationIcon} className="cursor-pointer" alt="brand_logo" />
+            <Image src={notiicationIcon} className="cursor-pointer w-7" alt="brand_logo" />
           </span>
         </div>
       </div>

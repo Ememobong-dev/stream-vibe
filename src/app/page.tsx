@@ -2,12 +2,19 @@ import { Button } from "../components/button/Button";
 import { TextArea } from "../components/home-second-section/TextArea";
 import { Navbar } from "../components/nav/Navbar";
 import playIcon from "@/public/icons/playIcon.svg";
-
+import devicePhone from "@/public/icons/device-phone.svg";
+import deviceTablet from "@/public/icons/device-tablet.svg";
+import deviceSmartTv from "@/public/icons/device-smartTv.svg";
+import deviceLaptop from "@/public/icons/device-laptop.svg";
+import deviceGaming from "@/public/icons/device-gaming.svg";
+import deviceVr from "@/public/icons/device-vr.svg";
 import cat_img1 from "@/public/images/cat_img.jpg";
 import cat_img2 from "@/public/images/cat_img2.png";
 import cat_img3 from "@/public/images/cat_img3.png";
 import { CategoryCard } from "../components/category/CategoryCard";
 import { CarouselButtons } from "../components/button/CarouselButtons";
+import { DeviceServicesCard } from "../components/Cards/DeviceServicesCard";
+import { Accordian } from "../components/accordian/Accordian";
 
 export default function Home() {
   return (
@@ -52,26 +59,107 @@ export default function Home() {
         </div>
       </div>
 
-       {/* Third Section */}
-       <div className="px-14 pt-32 flex flex-col gap-14 w-full">
+      {/* Third Section */}
+      <div className="px-14 pt-32 flex flex-col gap-14 w-full">
         <div className="flex justify-between items-center">
           <TextArea
             text="We Provide you streaming experience across various devices."
             subText="With StreamVibe, you can enjoy your favorite movies and TV shows anytime, anywhere. Our platform is designed to be compatible with a wide range of devices, ensuring that you never miss a moment of entertainment."
           />
-
-         
         </div>
-        <div className="flex  gap-3">
-          <CategoryCard categoryName="Action" imgSrc={cat_img1} />
-          <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
-          <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
-          <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
-          <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
+        <div className="grid grid-cols-3 gap-4">
+          <DeviceServicesCard
+            icon={devicePhone}
+            deviceType="SmartPhones"
+            info="StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+          />
+
+          <DeviceServicesCard
+            icon={deviceTablet}
+            deviceType="Tablet"
+            info="StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+          />
+
+          <DeviceServicesCard
+            icon={deviceSmartTv}
+            deviceType="Smart TV"
+            info="StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+          />
+
+          <DeviceServicesCard
+            icon={deviceLaptop}
+            deviceType="Laptops"
+            info="StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+          />
+
+          <DeviceServicesCard
+            icon={deviceGaming}
+            deviceType="Gaming Consoles"
+            info="StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+          />
+
+          <DeviceServicesCard
+            icon={deviceVr}
+            deviceType="Vr headsets"
+            info="StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store"
+          />
         </div>
       </div>
 
+      {/* Fourth Section */}
+      <div className="px-14 pt-32 flex flex-col gap-14 w-full">
+        <div className="flex justify-between items-center">
+          <TextArea
+            text="Frequently Asked Questions"
+            subText="Got questions? We've got answers! Check out our FAQ section to find answers to the most common questions about StreamVibe."
+          />
 
+          <Button variant="filled" text="Ask a Question" />
+        </div>
+
+        <div className="grid grid-cols-2  gap-x-24 gap-y-10">
+          <Accordian num="01" question="What is StreamVibe?" />
+          <Accordian num="01" question="What is StreamVibe?" />
+          <Accordian num="01" question="What is StreamVibe?" />
+          <Accordian num="01" question="What is StreamVibe?" />
+          <Accordian num="01" question="What is StreamVibe?" />
+          <Accordian num="01" question="What is StreamVibe?" />
+        </div>
+      </div>
+
+      {/* Fifth Section */}
+      <div className="px-14 pt-32 flex flex-col gap-14 w-full">
+        <div className="flex justify-between items-center">
+          <TextArea
+            text="Choose the plan that's right for you"
+            subText="Join StreamVibe and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!"
+          />
+
+          <div className="flex w-60 justify-between items-center p-2 rounded-lg bg-black-06 border border-black-12">
+            <div className="bg-black-10 border border-black-12 flex justify-center items-center p-2 cursor-pointer">
+              <span>
+                <p>Monthly</p>
+              </span>
+            </div>
+
+            <div className="bg-black-10 border border-black-12 flex justify-center items-center p-2 cursor-pointer">
+              <span>
+                <p>Yearly</p>
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="grid grid-cols-2  gap-x-24 gap-y-10">
+          <Accordian num="01" question="What is StreamVibe?" />
+          <Accordian num="01" question="What is StreamVibe?" />
+          <Accordian num="01" question="What is StreamVibe?" />
+          <Accordian num="01" question="What is StreamVibe?" />
+          <Accordian num="01" question="What is StreamVibe?" />
+          <Accordian num="01" question="What is StreamVibe?" />
+        </div>
+      </div>
     </div>
   );
 }
