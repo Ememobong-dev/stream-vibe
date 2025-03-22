@@ -15,6 +15,7 @@ import { CategoryCard } from "../components/category/CategoryCard";
 import { CarouselButtons } from "../components/button/CarouselButtons";
 import { DeviceServicesCard } from "../components/Cards/DeviceServicesCard";
 import { Accordian } from "../components/accordian/Accordian";
+import { PlansCard } from "../components/Cards/PlansCard";
 
 export default function Home() {
   return (
@@ -135,30 +136,37 @@ export default function Home() {
             subText="Join StreamVibe and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!"
           />
 
-          <div className="flex w-60 justify-between items-center p-2 rounded-lg bg-black-06 border border-black-12">
-            <div className="bg-black-10 border border-black-12 flex justify-center items-center p-2 cursor-pointer">
+          <div className="flex w-60 justify-between gap-5 items-center p-2 rounded-lg bg-black-06 border border-black-12">
+            <button className="bg-black-12 text-white w-1/2 border border-black-12 flex justify-center items-center p-2 cursor-pointer">
               <span>
                 <p>Monthly</p>
               </span>
-            </div>
+            </button>
 
-            <div className="bg-black-10 border border-black-12 flex justify-center items-center p-2 cursor-pointer">
+            <button className="bg-transparent text-grey-60  w-1/2 flex justify-center items-center p-2 cursor-pointer">
               <span>
                 <p>Yearly</p>
               </span>
-            </div>
+            </button>
           </div>
 
         </div>
 
-        <div className="grid grid-cols-2  gap-x-24 gap-y-10">
-          <Accordian num="01" question="What is StreamVibe?" />
-          <Accordian num="01" question="What is StreamVibe?" />
-          <Accordian num="01" question="What is StreamVibe?" />
-          <Accordian num="01" question="What is StreamVibe?" />
-          <Accordian num="01" question="What is StreamVibe?" />
-          <Accordian num="01" question="What is StreamVibe?" />
+        <div className="grid grid-cols-3 gap-10">
+          <PlansCard planAmount="9.99" planInfo="Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles."
+          planTitle="Basic Plan"
+           />
+          <PlansCard planAmount="12.99" planInfo="Access to a wider selection of movies and shows, including most new releases and exclusive content"
+          planTitle="Standard Plan"
+           />
+          <PlansCard planAmount="14.99" planInfo="Access to a widest selection of movies and shows, including all new releases and Offline Viewing."
+          planTitle="Premium Plan"
+           />
         </div>
+      </div>
+
+      <div>
+        
       </div>
     </div>
   );
