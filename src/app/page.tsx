@@ -1,14 +1,13 @@
-import Image from "next/image";
 import { Button } from "../components/button/Button";
 import { TextArea } from "../components/home-second-section/TextArea";
 import { Navbar } from "../components/nav/Navbar";
 import playIcon from "@/public/icons/playIcon.svg";
-import leftIcon from "@/public/icons/left-arrow.svg";
-import rightIcon from "@/public/icons/right-arrow.svg";
+
 import cat_img1 from "@/public/images/cat_img.jpg";
 import cat_img2 from "@/public/images/cat_img2.png";
 import cat_img3 from "@/public/images/cat_img3.png";
 import { CategoryCard } from "../components/category/CategoryCard";
+import { CarouselButtons } from "../components/button/CarouselButtons";
 
 export default function Home() {
   return (
@@ -41,40 +40,38 @@ export default function Home() {
             subText="Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new"
           />
 
-          <div className="flex w-60 justify-between items-center p-2 rounded-lg bg-black-06 border border-black-12">
-            <div className="bg-black-10 border border-black-12 flex justify-center items-center p-2 cursor-pointer">
-              <span>
-                <Image src={leftIcon} alt="left-arrow" />
-              </span>
-            </div>
+          <CarouselButtons />
+        </div>
 
-            <div className="flex  justify-between">
-              {[...Array(4)].map((_, index) => (
-                <div
-                  className={`rounded-2xl ${
-                    index === 0 ? "bg-red-45" : "bg-black-20"
-                  }  border w-8 h-2 p-px`}
-                  key={index}
-                ></div>
-              ))}
-            </div>
+        <div className="flex  gap-3">
+          <CategoryCard categoryName="Action" imgSrc={cat_img1} />
+          <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
+          <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
+          <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
+          <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
+        </div>
+      </div>
 
-            <div className="bg-black-10 border border-black-12 flex justify-center items-center p-2 cursor-pointer">
-              <span>
-                <Image src={rightIcon} alt="left-arrow" />
-              </span>
-            </div>
-          </div>
+       {/* Third Section */}
+       <div className="px-14 pt-32 flex flex-col gap-14 w-full">
+        <div className="flex justify-between items-center">
+          <TextArea
+            text="We Provide you streaming experience across various devices."
+            subText="With StreamVibe, you can enjoy your favorite movies and TV shows anytime, anywhere. Our platform is designed to be compatible with a wide range of devices, ensuring that you never miss a moment of entertainment."
+          />
+
+         
         </div>
         <div className="flex  gap-3">
-        <CategoryCard categoryName="Action" imgSrc={cat_img1} />
-        <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
-        <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
-        <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
-        <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
+          <CategoryCard categoryName="Action" imgSrc={cat_img1} />
+          <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
+          <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
+          <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
+          <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
+        </div>
       </div>
-      </div>
-      
+
+
     </div>
   );
 }
