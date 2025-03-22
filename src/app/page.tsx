@@ -129,7 +129,7 @@ export default function Home() {
       </div>
 
       {/* Fifth Section */}
-      <div className="px-14 pt-32 flex flex-col gap-14 w-full">
+      <div className="px-14 py-32 flex flex-col gap-14 w-full">
         <div className="flex justify-between items-center">
           <TextArea
             text="Choose the plan that's right for you"
@@ -149,24 +149,39 @@ export default function Home() {
               </span>
             </button>
           </div>
-
         </div>
 
         <div className="grid grid-cols-3 gap-10">
-          <PlansCard planAmount="9.99" planInfo="Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles."
-          planTitle="Basic Plan"
-           />
-          <PlansCard planAmount="12.99" planInfo="Access to a wider selection of movies and shows, including most new releases and exclusive content"
-          planTitle="Standard Plan"
-           />
-          <PlansCard planAmount="14.99" planInfo="Access to a widest selection of movies and shows, including all new releases and Offline Viewing."
-          planTitle="Premium Plan"
-           />
+          <PlansCard
+            planAmount="9.99"
+            planInfo="Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles."
+            planTitle="Basic Plan"
+          />
+          <PlansCard
+            planAmount="12.99"
+            planInfo="Access to a wider selection of movies and shows, including most new releases and exclusive content"
+            planTitle="Standard Plan"
+          />
+          <PlansCard
+            planAmount="14.99"
+            planInfo="Access to a widest selection of movies and shows, including all new releases and Offline Viewing."
+            planTitle="Premium Plan"
+          />
         </div>
       </div>
 
-      <div>
-        
+      {/* SIXTH SECTION */}
+      <div className="px-14 bannerImage1 flex justify-between items-center">
+        <div>
+          <h3 className="font-bold text-5xl text-white">
+            Start your free trial today!
+          </h3>
+          <p className="text-grey-60">
+            This is a clear and concise call to action that encourages users to
+            sign up for a free trial of StreamVibe.
+          </p>
+        </div>
+        <Button variant="filled" text="Start a Free Trial" />
       </div>
     </div>
   );
