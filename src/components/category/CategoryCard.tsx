@@ -10,7 +10,7 @@ export const CategoryCard = ({
   imgSrc: StaticImageData;
 }) => {
   return (
-    <div className="rounded-lg w-[300px] h-auto bg-black-10 p-5 border border-black-15 flex flex-col gap-3 ">
+    <div className="rounded-lg w-full h-auto bg-black-10 p-5 border border-black-15 flex flex-col gap-3 ">
       <span>
         <Image src={imgSrc} className="w-full" alt="right_icon" />
       </span>
