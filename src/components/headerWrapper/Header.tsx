@@ -10,7 +10,7 @@ export const Header = ({
   headerImg,
   headerTitle,
   headerDescription,
-  carousel,
+//   carousel,
 }: {
   headerImg: string;
   headerTitle: string;
@@ -23,7 +23,7 @@ export const Header = ({
         <div className="flex flex-col justify-center items-center">
           <div className="absolute bottom-36">
             <div className="flex flex-col gap-4 justify-center items-center">
-              <h3 className="text-white font-manrope font-bold text-3xl min-[1400px]:text-5xl">
+              <h3 className="text-white font-manrope font-bold text-3xl min-[1400px]:text">
                 {" "}
                 {headerTitle}{" "}
               </h3>
