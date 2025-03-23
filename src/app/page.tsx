@@ -16,6 +16,7 @@ import { CarouselButtons } from "../components/button/CarouselButtons";
 import { DeviceServicesCard } from "../components/Cards/DeviceServicesCard";
 import { Accordian } from "../components/accordian/Accordian";
 import { PlansCard } from "../components/Cards/PlansCard";
+import { Footer } from "../components/footer/Footer";
 
 export default function Home() {
   return (
@@ -120,11 +121,11 @@ export default function Home() {
 
         <div className="grid grid-cols-2  gap-x-24 gap-y-10">
           <Accordian num="01" question="What is StreamVibe?" />
-          <Accordian num="01" question="What is StreamVibe?" />
-          <Accordian num="01" question="What is StreamVibe?" />
-          <Accordian num="01" question="What is StreamVibe?" />
-          <Accordian num="01" question="What is StreamVibe?" />
-          <Accordian num="01" question="What is StreamVibe?" />
+          <Accordian num="02" question="How much does StreamVibe cost?" />
+          <Accordian num="03" question="What content is available on StreamVibe?" />
+          <Accordian num="04" question="How can I watch StreamVibe?" />
+          <Accordian num="05" question="How do I sign up for StreamVibe?" />
+          <Accordian num="06" question="What is the StreamVibe free trial?" />
         </div>
       </div>
 
@@ -171,18 +172,22 @@ export default function Home() {
       </div>
 
       {/* SIXTH SECTION */}
-      <div className="px-14 bannerImage1 flex justify-between items-center">
-        <div>
-          <h3 className="font-bold text-5xl text-white">
-            Start your free trial today!
-          </h3>
-          <p className="text-grey-60">
-            This is a clear and concise call to action that encourages users to
-            sign up for a free trial of StreamVibe.
-          </p>
+      <div className="p-14 ">
+        <div className="px-14 bannerImage1 flex justify-between items-center">
+          <div>
+            <h3 className="font-bold text-5xl text-white">
+              Start your free trial today!
+            </h3>
+            <p className="text-grey-60">
+              This is a clear and concise call to action that encourages users
+              to sign up for a free trial of StreamVibe.
+            </p>
+          </div>
+          <Button variant="filled" text="Start a Free Trial" />
         </div>
-        <Button variant="filled" text="Start a Free Trial" />
       </div>
+
+      <Footer />
     </div>
   );
 }

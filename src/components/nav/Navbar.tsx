@@ -32,7 +32,7 @@ export const Navbar = () => {
   const router = useRouter();
 
   return (
-    <div className="fixed top-0 bg-transparent py-3 px-14 w-full">
+    <div className="fixed top-0 bg-transparent z-50 py-3 px-14 w-full">
       <div className="flex justify-between items-center">
         <span>
           <Image src={brandLogo} onClick={() => router.push('/')} className="cursor-pointer" alt="brand_logo" />
