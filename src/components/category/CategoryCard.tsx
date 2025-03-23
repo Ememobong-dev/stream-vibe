@@ -15,7 +15,7 @@ export const CategoryCard = ({
         <Image src={imgSrc} className="w-full" alt="right_icon" />
       </span>
       <div className="flex justify-between text-white">
-        <p className="text-base font-semibold font-manrope"> {categoryName} </p>
+        <p className="text-sm min-[1400px]:text-base font-semibold font-manrope"> {categoryName} </p>
         <span>
           <Image src={rightIcon} alt="right_icon" />
         </span>

@@ -23,12 +23,12 @@ export const Header = ({
         <div className="flex flex-col justify-center items-center">
           <div className="absolute bottom-36">
             <div className="flex flex-col gap-4 justify-center items-center">
-              <h3 className="text-white font-manrope font-bold text-3xl">
+              <h3 className="text-white font-manrope font-bold text-3xl min-[1400px]:text-5xl">
                 {" "}
                 {headerTitle}{" "}
               </h3>
               <span className="flex justify-center">
-                <p className="text-grey-60 w-[75%] text-center">
+                <p className="text-grey-60 w-[75%] text-base min-[1400px]:text-lg text-center">
                   {headerDescription}
                 </p>
               </span>

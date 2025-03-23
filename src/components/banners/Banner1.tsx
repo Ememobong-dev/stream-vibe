@@ -6,7 +6,7 @@ export const Banner1 = () => {
     <div className="p-14 ">
       <div className="px-14 bannerImage1 flex justify-between items-center">
         <div>
-          <h3 className="font-bold text-5xl text-white">
+          <h3 className="font-bold text-4xl min-[1400px]:text-5xl text-white">
             Start your free trial today!
           </h3>
           <p className="text-grey-60">

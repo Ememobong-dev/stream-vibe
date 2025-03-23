@@ -1,4 +1,5 @@
 import { Banner1 } from "@/src/components/banners/Banner1";
+import { Footer } from "@/src/components/footer/Footer";
 import { Header } from "@/src/components/headerWrapper/Header";
 import { MoviesCategoryList } from "@/src/components/moviesBorderWrapper/MoviesCategoryList";
 import { MoviesListWrapper } from "@/src/components/moviesBorderWrapper/MoviesListWrapper";
@@ -36,6 +37,7 @@ const Movies = () => {
         </MoviesListWrapper>
       </div>
       <Banner1 />
+      <Footer />
     </div>
   );
 };

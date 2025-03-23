@@ -17,10 +17,10 @@ export const DeviceServicesCard = ({
           <Image src={icon} alt="device_icon" />
         </span>
         <span>
-          <p className="font-semibold font-manrope text-2xl text-white"> {deviceType} </p>
+          <p className="font-semibold font-manrope text-xl min-[1400px]:text-2xl text-white"> {deviceType} </p>
         </span>
       </div>
-      <div className="mt-3 text-grey-60 font-normal font-manrope text-lg">
+      <div className="mt-3 text-grey-60 font-normal font-manrope min-[1400px]:text-lg">
         <p>{info}</p>
       </div>
     </div>

@@ -9,7 +9,7 @@ export const MoviesListWrapper = ({
   movieCategory: string;
 }) => {
   return (
-    <div className="px-14 my-28">
+    <div className="px-14 mt-28">
       <div className=" border border-black-15 p-5 w-full relative h-auto">
         <div className="absolute w-auto -top-5 ">
           <Button variant="filled" text={movieCategory} />

@@ -41,7 +41,7 @@ export const Navbar = () => {
           {navLinks.map((navs, index) => (
             <Link href={navs.link} key={index}>
               <p
-                className={`text-grey-75 py-3 px-5 ${
+                className={`text-grey-75 p-2 text-sm  min-[1400px]:py-3 min-[1400px]:px-5  min-[1400px]:text-base ${
                   pathname === navs.link
                     ? "text-white bg-black-10 rounded-lg"
                     : ""
@@ -54,10 +54,10 @@ export const Navbar = () => {
         </div>
         <div className="flex gap-3 items-center">
           <span>
-            <Image src={searchIcon} className="cursor-pointer w-7" alt="brand_logo" />
+            <Image src={searchIcon} className="cursor-pointer w-5 min-[1400px]:w-7 " alt="brand_logo" />
           </span>
           <span>
-            <Image src={notiicationIcon} className="cursor-pointer w-7" alt="brand_logo" />
+            <Image src={notiicationIcon} className="cursor-pointer w-5 min-[1400px]:w-7 " alt="brand_logo" />
           </span>
         </div>
       </div>

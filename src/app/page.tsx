@@ -25,7 +25,7 @@ export default function Home() {
       <Navbar />
       <div className="landing_page"></div>
       <div className="flex flex-col gap-6 justify-center items-center px-14">
-        <h3 className="font-manrope font-bold text-white text-6xl">
+        <h3 className="font-manrope font-bold text-white text-4xl  min-[1400px]:text-6xl">
           The Best Streaming Experience
         </h3>
         <span className="flex justify-center items-center">
@@ -131,7 +131,7 @@ export default function Home() {
       </div>
 
       {/* Fifth Section */}
-      <div className="px-14 py-32 flex flex-col gap-14 w-full">
+      <div className="px-14 pt-32 flex flex-col gap-14 w-full">
         <div className="flex justify-between items-center">
           <TextArea
             text="Choose the plan that's right for you"
