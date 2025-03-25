@@ -29,6 +29,7 @@ import emptyStar from "@/public/icons/emptyStar.svg";
 import { CarouselButtons } from "@/src/components/button/CarouselButtons";
 import { Banner1 } from "@/src/components/banners/Banner1";
 import { Tags } from "@/src/components/tags/Tags";
+import { Footer } from "@/src/components/footer/Footer";
 
 const MoviesSinglePage = () => {
   const { moviesId } = useParams();
@@ -388,6 +389,7 @@ const MoviesSinglePage = () => {
         </Row>
       </div>
       <Banner1 />
+      <Footer />
     </div>
   );
 };

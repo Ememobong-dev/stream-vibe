@@ -26,25 +26,119 @@ import langIcon from "@/public/icons/language-icon.svg";
 import ratingIcon from "@/public/icons/ratingStar.svg";
 import genreIcon from "@/public/icons/genreIcon.svg";
 import emptyStar from "@/public/icons/emptyStar.svg";
+import downArrow from "@/public/icons/down-arrow-icon.svg";
+import upArrow from "@/public/icons/up-arrow-icon.svg";
+import episode1 from "@/public/images/shows--episode1.png";
+import episode2 from "@/public/images/shows--episode2.png";
+import episode3 from "@/public/images/shows--episode3.png";
+import episode4 from "@/public/images/shows--episode4.png";
+import episode5 from "@/public/images/shows--episode5.png";
 import { CarouselButtons } from "@/src/components/button/CarouselButtons";
 import { Banner1 } from "@/src/components/banners/Banner1";
 import { Tags } from "@/src/components/tags/Tags";
+import { EpisodeArea } from "@/src/components/shows-episodes/EpisodeArea";
+import { Footer } from "@/src/components/footer/Footer";
 
-const MoviesSinglePage = () => {
-  const { moviesId } = useParams();
+const ShowsSinglePage = () => {
+  const { showsId } = useParams();
 
   return (
     <div>
       <Navbar />
       <Header
-        headerImg="singleMoviesHeader"
-        headerTitle={moviesId ?? "Kantara"}
+        headerImg="singleShowsHeader"
+        headerTitle={showsId}
         headerDescription="A fiery young man clashes with an unflinching forest officer in a south Indian village where spirituality, fate and folklore rule the lands."
       />
       <div className="px-14 mt-28">
         <Row gutter={[32, 32]}>
           <Col xs={14}>
             <div className="flex flex-col gap-5">
+              <SinglePageCards>
+                <h3 className="text-2xl mb-8">Seasons and Episodes</h3>
+                <div className="flex flex-col gap-4">
+                  {/* FIRST SEASON */}
+                  <SinglePageCards variant="deepBlack" rounded>
+                    <div className="flex justify-between items-center">
+                      <div className="flex gap-2 items-center">
+                        <h3 className="text-2xl text-white">Season 01</h3>
+                        <p className="text-grey-60 text-lg">9 Episodes</p>
+                      </div>
+                      <div className="rounded-full w-10 h-10 flex justify-center items-center p-2 border border-black-15 bg-black-08">
+                        <Image src={downArrow} alt="arrow_icon" />
+                      </div>
+                    </div>
+                  </SinglePageCards>
+
+                  {/* SECOND SEASON */}
+                  <SinglePageCards variant="deepBlack" rounded>
+                    <div className="flex justify-between items-center">
+                      <div className="flex gap-2 items-center">
+                        <h3 className="text-2xl text-white">Season 02</h3>
+                        <p className="text-grey-60 text-lg">5 Episodes</p>
+                      </div>
+                      <div className="rounded-full w-10 h-10 flex justify-center items-center p-2 border border-black-15 bg-black-08">
+                        <Image src={upArrow} alt="arrow_icon" />
+                      </div>
+                    </div>
+                    <div>
+                      <EpisodeArea
+                        episodeNumber="01"
+                        episodeNumberInWords="One"
+                        episodeTitle="The Vanishing of Will Byers"
+                        episodeDuration="49"
+                        episodeDescription="On his way from a friend’s house, young Will sees something terrifying . Nearby, a sinister secret lurks in the depths of a government lab."
+                        imgSrc={episode1}
+                      />
+                      <EpisodeArea
+                        episodeNumber="02"
+                        episodeNumberInWords="Two"
+                        episodeTitle="The Weirdo on Maple Street"
+                        episodeDuration="56"
+                        episodeDescription="Lucas, Mike and Dustin try to talk to the girl they found in the woods. Hopper questions an anxious Joyce about an unsettling phone call."
+                        imgSrc={episode2}
+                      />
+                      <EpisodeArea
+                        episodeNumber="03"
+                        episodeNumberInWords="Three"
+                        episodeTitle="Holly, Jolly"
+                        episodeDuration="52"
+                        episodeDescription="An increasingly concerned Nancy looks for Barb and finds out what Jonathan's been up to. Joyce is convinced Will is trying to talk to her."
+                        imgSrc={episode3}
+                      />
+                      <EpisodeArea
+                        episodeNumber="04"
+                        episodeNumberInWords="Four"
+                        episodeTitle="The Body"
+                        episodeDuration="51"
+                        episodeDescription="Refusing to believe Will is dead, Joyce tries to connect with her son. The boys give Eleven a makeover.."
+                        imgSrc={episode4}
+                      />
+                      <EpisodeArea
+                        episodeNumber="05"
+                        episodeNumberInWords="Five"
+                        episodeTitle="The Flea and the Acrobat"
+                        episodeDuration="53"
+                        episodeDescription="Hopper breaks into the lab while Nancy and Jonathan confront the force that took Will. The boys ask Mr. Clarke how to travel to another dimension."
+                        imgSrc={episode5}
+                      />
+                    </div>
+                  </SinglePageCards>
+
+                  {/* THIRD SEASON */}
+                  <SinglePageCards variant="deepBlack" rounded>
+                    <div className="flex justify-between items-center">
+                      <div className="flex gap-2 items-center">
+                        <h3 className="text-2xl">Season 03</h3>
+                        <p className="text-grey-60 text-lg">7 Episodes</p>
+                      </div>
+                      <div className="rounded-full w-10 h-10 flex justify-center items-center p-2 border border-black-15 bg-black-08">
+                        <Image src={downArrow} alt="arrow_icon" />
+                      </div>
+                    </div>
+                  </SinglePageCards>
+                </div>
+              </SinglePageCards>
               <SinglePageCards>
                 <p className="text-grey-60">Description</p>
                 <span>
@@ -235,7 +329,9 @@ const MoviesSinglePage = () => {
                   <span>
                     <Image src={langIcon} className="w-6 h-6" alt="langIcon" />
                   </span>
-                  <span className="text-grey-60 text-xl">Available Languages</span>
+                  <span className="text-grey-60 text-xl">
+                    Available Languages
+                  </span>
                 </div>
                 <div className="flex gap-3 flex-wrap mt-3">
                   <Tags text="English" />
@@ -361,7 +457,11 @@ const MoviesSinglePage = () => {
                 <span className="text-grey-60 text-xl">Director</span>
                 <div className="flex gap-3 flex-wrap mt-3 bg-black-08 rounded-lg p-3 border border-black-15">
                   <span>
-                    <Image src={image001} className="w-16 h-16" alt="director_img" />
+                    <Image
+                      src={image001}
+                      className="w-16 h-16"
+                      alt="director_img"
+                    />
                   </span>
                   <div>
                     <p>Rishab Shetty</p>
@@ -374,7 +474,11 @@ const MoviesSinglePage = () => {
                 <span className="text-grey-60 text-xl">Music</span>
                 <div className="flex gap-3 flex-wrap mt-3 bg-black-08 rounded-lg p-3 border border-black-15">
                   <span>
-                    <Image src={image5} className="w-16 h-16" alt="director_img" />
+                    <Image
+                      src={image5}
+                      className="w-16 h-16"
+                      alt="director_img"
+                    />
                   </span>
                   <div>
                     <p>B. Ajaneesh Loknath</p>
@@ -382,14 +486,14 @@ const MoviesSinglePage = () => {
                   </div>
                 </div>
               </div>
-
             </SinglePageCards>
           </Col>
         </Row>
       </div>
       <Banner1 />
+      <Footer />
     </div>
   );
 };
 
-export default MoviesSinglePage;
+export default ShowsSinglePage;

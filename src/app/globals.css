@@ -72,18 +72,17 @@ body {
   url('../../public/images/single-movies-header.png');
 }
 
+.singleShowsHeader {
+  background-image:   linear-gradient(to top, rgba(38, 38, 38, 0.9 ), rgba(38, 38, 38, 0.4), transparent),
+  url('../../public/images/stranger-things.png');
+}
+
 .moviesHeader,
-.singleMoviesHeader {
+.singleMoviesHeader,
+.singleShowsHeader {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 600px;
-}
-
-@media (min-width: 1400px) {
-  .moviesHeader {
-    height: 100vh;
-  }
-  
+  height: 100dvh;
 }
