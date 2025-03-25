@@ -17,6 +17,8 @@ import image4 from "@/public/images/SP-Image-4.png";
 import image5 from "@/public/images/SP-Image-5.png";
 import image6 from "@/public/images/SP-Image-6.png";
 import image7 from "@/public/images/SP-Image-7.png";
+import usaDirector from "@/public/images/usa-director.png";
+import usaMusic from "@/public/images/usa-music.png";
 import { Button } from "@/src/components/button/Button";
 import plusIcon from "@/public/icons/plus-white.svg";
 import filledStar from "@/public/icons/filledStar.svg";
@@ -48,7 +50,7 @@ const ShowsSinglePage = () => {
       <Header
         headerImg="singleShowsHeader"
         headerTitle={showsId}
-        headerDescription="A fiery young man clashes with an unflinching forest officer in a south Indian village where spirituality, fate and folklore rule the lands."
+        headerDescription="When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl."
       />
       <div className="px-14 mt-28">
         <Row gutter={[32, 32]}>
@@ -143,9 +145,7 @@ const ShowsSinglePage = () => {
                 <p className="text-grey-60">Description</p>
                 <span>
                   <p>
-                    A fiery young man clashes with an unflinching forest officer
-                    in a south Indian village where spirituality, fate and
-                    folklore rule the lands.
+                  When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.
                   </p>
                 </span>
               </SinglePageCards>
@@ -448,8 +448,9 @@ const ShowsSinglePage = () => {
                   <span className="text-grey-60 text-xl">Genres</span>
                 </div>
                 <div className="flex gap-3 flex-wrap mt-3">
-                  <Tags text="Action" />
-                  <Tags text="Adventure" />
+                  <Tags text="Sci-Fi TV" />
+                  <Tags text="Teen TV Shows" />
+                  <Tags text="US TV Shows" />
                 </div>
               </div>
 
@@ -458,14 +459,14 @@ const ShowsSinglePage = () => {
                 <div className="flex gap-3 flex-wrap mt-3 bg-black-08 rounded-lg p-3 border border-black-15">
                   <span>
                     <Image
-                      src={image001}
+                      src={usaDirector}
                       className="w-16 h-16"
                       alt="director_img"
                     />
                   </span>
                   <div>
-                    <p>Rishab Shetty</p>
-                    <p className="text-grey-60">From India</p>
+                    <p>The Duffer Brothers</p>
+                    <p className="text-grey-60">From USA</p>
                   </div>
                 </div>
               </div>
@@ -475,14 +476,14 @@ const ShowsSinglePage = () => {
                 <div className="flex gap-3 flex-wrap mt-3 bg-black-08 rounded-lg p-3 border border-black-15">
                   <span>
                     <Image
-                      src={image5}
+                      src={usaMusic}
                       className="w-16 h-16"
                       alt="director_img"
                     />
                   </span>
                   <div>
-                    <p>B. Ajaneesh Loknath</p>
-                    <p className="text-grey-60">From India</p>
+                    <p>Kyle Dixon</p>
+                    <p className="text-grey-60">From USA</p>
                   </div>
                 </div>
               </div>
