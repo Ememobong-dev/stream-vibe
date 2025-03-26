@@ -24,7 +24,7 @@ const Support = () => {
                 </h2>
                 <span>
                   <p className="text-grey-60 my-3">
-                    We're here to help you with any problems you may be having
+                    We&apos;re here to help you with any problems you may be having
                     with our product.
                   </p>
                 </span>
