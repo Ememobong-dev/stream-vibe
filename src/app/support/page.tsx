@@ -11,11 +11,12 @@ const Support = () => {
     <div>
       <Navbar />
       <div className="pt-64 px-14">
-        <div className="border border-red-45">
+        <div>
           <Row
             gutter={32}
+           className="w-full min-h-full  max-h-full h-full"
           >
-            <Col xs={8} className="h-full">
+            <Col xs={8} className="w-full min-h-full  max-h-full h-full">
               <div>
                 <h2 className="text-4xl text-white">
                   Welcome to our support page
@@ -35,12 +36,12 @@ const Support = () => {
                 </span>
               </div>
             </Col>
-            <Col xs={16} className="h-full">
-              <div className="h-full">
+            <Col xs={16} className=" w-full min-h-full  max-h-full h-ful">
+              <div className="h-full w-full">
                 <SinglePageCards variant="deepBlack" rounded>
                   <div className="h-full">
                     <Row gutter={[32, 32]} className="h-full">
-                      <Col xs={12}>
+                      <Col xs={12} className="h-full">
                         <div className="flex flex-col gap-3">
                           <label htmlFor="firstName" className="text-lg">
                             First Name
@@ -53,7 +54,7 @@ const Support = () => {
                           />
                         </div>
                       </Col>
-                      <Col xs={12}>
+                      <Col xs={12} className="h-full">
                         <div className="flex flex-col gap-3">
                           <label htmlFor="lastName" className="text-lg">
                             Last Name
@@ -66,7 +67,7 @@ const Support = () => {
                           />
                         </div>
                       </Col>
-                      <Col xs={12}>
+                      <Col xs={12} className="h-full">
                         <div className="flex flex-col gap-3">
                           <label htmlFor="email" className="text-lg">
                             Email
@@ -79,7 +80,7 @@ const Support = () => {
                           />
                         </div>
                       </Col>
-                      <Col xs={12}>
+                      <Col xs={12} className="h-full">
                         <div className="flex flex-col gap-3">
                           <label htmlFor="phone" className="text-lg">
                             Phone Number
