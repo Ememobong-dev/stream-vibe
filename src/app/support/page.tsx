@@ -5,6 +5,10 @@ import React from "react";
 import supportImg from "@/public/images/support-headerImg.png";
 import { SinglePageCards } from "@/src/components/Cards/SinglePageCards";
 import { Button } from "@/src/components/button/Button";
+import { TextArea } from "@/src/components/home-second-section/TextArea";
+import { Accordian } from "@/src/components/accordian/Accordian";
+import { Banner1 } from "@/src/components/banners/Banner1";
+import { Footer } from "@/src/components/footer/Footer";
 
 const Support = () => {
   return (
@@ -12,10 +16,7 @@ const Support = () => {
       <Navbar />
       <div className="pt-64 px-14">
         <div>
-          <Row
-            gutter={32}
-           className="w-full min-h-full  max-h-full h-full"
-          >
+          <Row gutter={32} className="w-full min-h-full  max-h-full h-full">
             <Col xs={8} className="w-full min-h-full  max-h-full h-full">
               <div>
                 <h2 className="text-4xl text-white">
@@ -121,7 +122,37 @@ const Support = () => {
             </Col>
           </Row>
         </div>
+
+        {/* FAQ */}
+        <div className="px-14 pt-32 flex flex-col gap-14 w-full">
+          <div className="flex justify-between items-center">
+            <TextArea
+              text="Frequently Asked Questions"
+              subText="Got questions? We've got answers! Check out our FAQ section to find answers to the most common questions about StreamVibe."
+            />
+
+            <Button variant="filled" text="Ask a Question" />
+          </div>
+
+          <div className="grid grid-cols-2  gap-x-24 gap-y-10">
+            <Accordian num="01" question="What is StreamVibe?" />
+            <Accordian num="02" question="How much does StreamVibe cost?" />
+            <Accordian
+              num="03"
+              question="What content is available on StreamVibe?"
+            />
+            <Accordian num="04" question="How can I watch StreamVibe?" />
+            <Accordian num="05" question="How do I sign up for StreamVibe?" />
+            <Accordian num="06" question="What is the StreamVibe free trial?" />
+          </div>
+        </div>
+
+        {/* Banner */}
+        <Banner1 />
+
       </div>
+      <Footer />
+
     </div>
   );
 };
