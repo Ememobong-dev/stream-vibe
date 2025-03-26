@@ -24,7 +24,7 @@ export const EpisodeArea = ({
       <h2 className="text-grey-60 text-3xl"> {episodeNumber} </h2>
       <div className="flex items-center gap-5">
         <span>
-          <Image src={imgSrc} className="w-[200px] h-[100px]"  alt="episode_thumbnail" />
+          <Image src={imgSrc} className="w-[150px] min-w-[150px] max-w-[150px] h-[100px]"  alt="episode_thumbnail" />
         </span>
         <div className="flex flex-col gap-2">
           <div className="flex justify-between items-center">
