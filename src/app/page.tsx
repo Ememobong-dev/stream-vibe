@@ -16,13 +16,12 @@ import cat_img3 from "@/public/images/cat_img3.png";
 import { CategoryCard } from "../components/category/CategoryCard";
 import { CarouselButtons } from "../components/button/CarouselButtons";
 import { DeviceServicesCard } from "../components/Cards/DeviceServicesCard";
-import { Accordian } from "../components/faq/Accordian";
-import { PlansCard } from "../components/Cards/PlansCard";
 import { Footer } from "../components/footer/Footer";
 import { Banner1 } from "../components/banners/Banner1";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import Faq from "../components/faq/Faq";
+import { Plans } from "../components/faq/PlansArea/Plans";
 
 export default function Home() {
   const [cardWidth, setCardWidth] = useState(0);
@@ -36,10 +35,7 @@ export default function Home() {
         setCardWidth(firstCard.offsetWidth + 12); // 12px accounts for the gap
       }
     }
-
-
-  }, [])
-
+  }, []);
 
   const handleScroll = (direction: string) => {
     if (scrollRef.current && cardWidth > 0) {
@@ -49,9 +45,7 @@ export default function Home() {
         behavior: "smooth",
       });
     }
-
-  }
-
+  };
 
   return (
     <div>
@@ -92,7 +86,10 @@ export default function Home() {
           <CarouselButtons onScroll={handleScroll} />
         </div>
 
-        <div ref={scrollRef} className="flex  gap-3 overflow-x-scroll scroll-smooth">
+        <div
+          ref={scrollRef}
+          className="flex  gap-3 overflow-x-scroll scroll-smooth"
+        >
           <CategoryCard categoryName="Action" imgSrc={cat_img1} />
           <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
           <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
@@ -170,50 +167,11 @@ export default function Home() {
         </div>
 
         <Faq />
-
-
       </div>
 
       {/* Fifth Section */}
-      <div className="px-14 pt-32 flex flex-col gap-14 w-full">
-        <div className="flex justify-between items-center">
-          <TextArea
-            text="Choose the plan that's right for you"
-            subText="Join StreamVibe and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!"
-          />
-
-          <div className="flex w-60 justify-between gap-5 items-center p-2 rounded-lg bg-black-06 border border-black-12">
-            <button className="bg-black-12 text-white w-1/2 border border-black-12 flex justify-center items-center p-2 cursor-pointer">
-              <span>
-                <p>Monthly</p>
-              </span>
-            </button>
-
-            <button className="bg-transparent text-grey-60  w-1/2 flex justify-center items-center p-2 cursor-pointer">
-              <span>
-                <p>Yearly</p>
-              </span>
-            </button>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-3 gap-10">
-          <PlansCard
-            planAmount="9.99"
-            planInfo="Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles."
-            planTitle="Basic Plan"
-          />
-          <PlansCard
-            planAmount="12.99"
-            planInfo="Access to a wider selection of movies and shows, including most new releases and exclusive content"
-            planTitle="Standard Plan"
-          />
-          <PlansCard
-            planAmount="14.99"
-            planInfo="Access to a widest selection of movies and shows, including all new releases and Offline Viewing."
-            planTitle="Premium Plan"
-          />
-        </div>
+      <div className="px-14 pt-32">
+        <Plans />
       </div>
 
       {/* SIXTH SECTION */}
