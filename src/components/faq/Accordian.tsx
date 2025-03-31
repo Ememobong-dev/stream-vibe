@@ -9,15 +9,14 @@ export const Accordian = ({
   question,
   answers,
   showAccordian,
-  onClick
+  onClick,
 }: {
   num: string;
   question: string;
   answers: string;
-  showAccordian?: boolean
-  onClick: () => void
+  showAccordian?: boolean;
+  onClick: () => void;
 }) => {
-
   return (
     <div>
       <div
@@ -40,9 +39,11 @@ export const Accordian = ({
             </span>
           </div>
           {/* ANSWERS */}
-          <div>
-            <p className="text-grey-60">{answers}</p>
-          </div>
+          {showAccordian && (
+            <div>
+              <p className="text-grey-60">{answers}</p>
+            </div>
+          )}
         </div>
       </div>
 
