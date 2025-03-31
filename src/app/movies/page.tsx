@@ -10,6 +10,11 @@ import React, { useEffect, useState } from "react";
 import { CategoryCard } from "@/src/components/category/CategoryCard";
 import axios from "axios";
 
+
+
+
+
+
 const Movies = () => {
   const [moviesCategories, setMoviesCategories] = useState([]);
   const [showCategories, setShowCategories] = useState([]);
@@ -47,7 +52,7 @@ const Movies = () => {
       />
       <div>
         <MoviesListWrapper movieCategory="Movies">
-          {moviesCategories.map((category, index) => (
+          {moviesCategories?.map((category, index) => (
             <MoviesCategoryList
               key={index}
               categoryTopic={category.categoryTopic}
@@ -65,7 +70,7 @@ const Movies = () => {
         </MoviesListWrapper>
 
         <MoviesListWrapper movieCategory="Shows">
-          {showCategories.map((category, index) => (
+          {showCategories?.map((category, index) => (
             <MoviesCategoryList
               key={index}
               categoryTopic={category.categoryTopic}

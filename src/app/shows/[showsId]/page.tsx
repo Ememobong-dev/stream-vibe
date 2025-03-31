@@ -53,20 +53,20 @@ const ShowsSinglePage = () => {
       />
       <div className="px-14 mt-28">
         <Row gutter={[32, 32]}>
-          <Col xs={14}>
+          <Col xs={16}>
             <div className="flex flex-col gap-5">
-              <SinglePageCards>
+              <SinglePageCards paddingSize="sm">
                 <h3 className="text-2xl mb-8">Seasons and Episodes</h3>
                 <div className="flex flex-col gap-4">
                   {/* FIRST SEASON */}
                   <SinglePageCards variant="deepBlack" rounded>
                     <div className="flex justify-between items-center">
                       <div className="flex gap-2 items-center">
-                        <h3 className="text-2xl text-white">Season 01</h3>
+                        <h3 className="text-xl text-white">Season 01</h3>
                         <p className="text-grey-60 text-lg">9 Episodes</p>
                       </div>
-                      <div className="rounded-full w-10 h-10 flex justify-center items-center p-2 border border-black-15 bg-black-08">
-                        <Image src={downArrow} alt="arrow_icon" />
+                      <div className="rounded-full w-7 h-7 flex justify-center items-center p-2 border border-black-15 bg-black-08">
+                        <Image src={downArrow} width={10} height={10} alt="arrow_icon" />
                       </div>
                     </div>
                   </SinglePageCards>
@@ -75,11 +75,11 @@ const ShowsSinglePage = () => {
                   <SinglePageCards variant="deepBlack" rounded>
                     <div className="flex justify-between items-center">
                       <div className="flex gap-2 items-center">
-                        <h3 className="text-2xl text-white">Season 02</h3>
+                        <h3 className="text-xl text-white">Season 02</h3>
                         <p className="text-grey-60 text-lg">5 Episodes</p>
                       </div>
-                      <div className="rounded-full w-10 h-10 flex justify-center items-center p-2 border border-black-15 bg-black-08">
-                        <Image src={upArrow} alt="arrow_icon" />
+                      <div className="rounded-full w-7 h-7 flex justify-center items-center p-2 border border-black-15 bg-black-08">
+                        <Image src={upArrow} width={10} height={10} alt="arrow_icon" />
                       </div>
                     </div>
                     <div>
@@ -130,10 +130,10 @@ const ShowsSinglePage = () => {
                   <SinglePageCards variant="deepBlack" rounded>
                     <div className="flex justify-between items-center">
                       <div className="flex gap-2 items-center">
-                        <h3 className="text-2xl">Season 03</h3>
+                        <h3 className="text-xl">Season 03</h3>
                         <p className="text-grey-60 text-lg">7 Episodes</p>
                       </div>
-                      <div className="rounded-full w-10 h-10 flex justify-center items-center p-2 border border-black-15 bg-black-08">
+                      <div className="rounded-full w-7 h-7 flex justify-center items-center p-2 border border-black-15 bg-black-08">
                         <Image src={downArrow} alt="arrow_icon" />
                       </div>
                     </div>
@@ -304,28 +304,28 @@ const ShowsSinglePage = () => {
               </SinglePageCards>
             </div>
           </Col>
-          <Col xs={10}>
+          <Col xs={8}>
             <SinglePageCards>
               <div className="flex flex-col mb-5">
                 <div className="flex gap-1 items-center">
                   <span>
                     <Image
                       src={calenderIcon}
-                      className="w-6 h-6"
+                      className="w-4 h-4"
                       alt="calender_icon"
                     />
                   </span>
-                  <span className="text-grey-60 text-xl">Released Year</span>
+                  <span className="text-grey-60 text-base">Released Year</span>
                 </div>
-                <p className="text-white text-xl">2022</p>
+                <p className="text-white text-base">2022</p>
               </div>
 
               <div className="flex flex-col mb-5">
                 <div className="flex gap-1 items-center">
                   <span>
-                    <Image src={langIcon} className="w-6 h-6" alt="langIcon" />
+                    <Image src={langIcon} className="w-4 h-4" alt="langIcon" />
                   </span>
-                  <span className="text-grey-60 text-xl">
+                  <span className="text-grey-60 text-base">
                     Available Languages
                   </span>
                 </div>
@@ -343,55 +343,16 @@ const ShowsSinglePage = () => {
                   <span>
                     <Image
                       src={ratingIcon}
-                      className="w-6 h-6"
+                      className="w-4 h-4"
                       alt="ratingIcon"
                     />
                   </span>
-                  <span className="text-grey-60 text-xl">Ratings</span>
+                  <span className="text-grey-60 text-base">Ratings</span>
                 </div>
 
-                <div className="flex gap-5">
+                <div className="flex gap-2">
                   <SinglePageCards variant="tags">
-                    <h2 className="text-lg max-[1400px]:text-xl">IMDb</h2>
-                    <div className="flex gap-2 items-center justify-center mt-1 text-grey-60">
-                      <span>
-                        <Image
-                          src={filledStar}
-                          className="w-4 h-4"
-                          alt="star"
-                        />
-                      </span>
-                      <span>
-                        <Image
-                          src={filledStar}
-                          className="w-4 h-4"
-                          alt="star"
-                        />
-                      </span>
-                      <span>
-                        <Image
-                          src={filledStar}
-                          className="w-4 h-4"
-                          alt="star"
-                        />
-                      </span>
-                      <span>
-                        <Image
-                          src={filledStar}
-                          className="w-4 h-4"
-                          alt="star"
-                        />
-                      </span>
-                      <span>
-                        <Image src={halfStar} className="w-4 h-4" alt="star" />
-                      </span>
-                      <span>
-                        <p className="text-lg">4.5</p>
-                      </span>
-                    </div>
-                  </SinglePageCards>
-                  <SinglePageCards variant="tags">
-                    <h2 className="text-lg max-[1400px]:text-xl">Streamvibe</h2>
+                    <h2 className="text-base max-[1400px]:text-xl">Streamvibe</h2>
                     <div className="flex gap-2 items-center justify-center mt-1 text-grey-60">
                       <span>
                         <Image
@@ -425,7 +386,7 @@ const ShowsSinglePage = () => {
                         <Image src={emptyStar} className="w-4 h-4" alt="star" />
                       </span>
                       <span>
-                        <p className="text-lg">4</p>
+                        <p className="text-sm">4</p>
                       </span>
                     </div>
                   </SinglePageCards>
@@ -437,11 +398,11 @@ const ShowsSinglePage = () => {
                   <span>
                     <Image
                       src={genreIcon}
-                      className="w-6 h-6"
+                      className="w-4 h-4"
                       alt="genreIcon"
                     />
                   </span>
-                  <span className="text-grey-60 text-xl">Genres</span>
+                  <span className="text-grey-60 text-lg">Genres</span>
                 </div>
                 <div className="flex gap-3 flex-wrap mt-3">
                   <Tags text="Sci-Fi TV" />
@@ -451,7 +412,7 @@ const ShowsSinglePage = () => {
               </div>
 
               <div className="flex flex-col mb-5">
-                <span className="text-grey-60 text-xl">Director</span>
+                <span className="text-grey-60 text-lg">Director</span>
                 <div className="flex gap-3 flex-wrap mt-3 bg-black-08 rounded-lg p-3 border border-black-15">
                   <span>
                     <Image
@@ -468,7 +429,7 @@ const ShowsSinglePage = () => {
               </div>
 
               <div className="flex flex-col mb-5">
-                <span className="text-grey-60 text-xl">Music</span>
+                <span className="text-grey-60 text-lg">Music</span>
                 <div className="flex gap-3 flex-wrap mt-3 bg-black-08 rounded-lg p-3 border border-black-15">
                   <span>
                     <Image

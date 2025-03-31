@@ -1,55 +1,154 @@
 {
     "categories": [
-      {
-        "categoryTopic": "Our Genres",
-        "shows": [
-          { "id": 1, "title": "Avengers: Endgame", "imgSrc": "/images/cat_img.jpg" },
-          { "id": 2, "title": "Inception", "imgSrc": "/images/cat_img2.png" },
-          { "id": 3, "title": "Joker", "imgSrc": "/images/cat_img3.png" }
-          { "id": 1, "title": "Avengers: Endgame", "imgSrc": "/images/cat_img.jpg" },
-          { "id": 2, "title": "Inception", "imgSrc": "/images/cat_img2.png" },
-        ]
-      },
-      {
-        "categoryTopic": "Popular Top 10 In Genres",
-        "shows": [
-          { "id": 4, "title": "Dune: Part Two", "imgSrc": "/images/cat_img.jpg" },
-          { "id": 5, "title": "The Batman", "imgSrc": "/images/cat_img2.png" },
-          { "id": 6, "title": "Spider-Man: No Way Home", "imgSrc": "/images/cat_img3.png" }
-          { "id": 4, "title": "Dune: Part Two", "imgSrc": "/images/cat_img.jpg" },
-          { "id": 5, "title": "The Batman", "imgSrc": "/images/cat_img2.png" },
-        ]
-      },
-      {
-        "categoryTopic": "Trending Shows Now",
-        "shows": [
-          { "id": 1, "title": "Avengers: Endgame", "imgSrc": "/images/cat_img.jpg" },
-          { "id": 2, "title": "Inception", "imgSrc": "/images/cat_img2.png" },
-          { "id": 3, "title": "Joker", "imgSrc": "/images/cat_img3.png" }
-          { "id": 1, "title": "Avengers: Endgame", "imgSrc": "/images/cat_img.jpg" },
-          { "id": 2, "title": "Inception", "imgSrc": "/images/cat_img2.png" },
-        ]
-      },
-      {
-        "categoryTopic": "New Releasesd Shows",
-        "shows": [
-          { "id": 4, "title": "Dune: Part Two", "imgSrc": "/images/cat_img.jpg" },
-          { "id": 5, "title": "The Batman", "imgSrc": "/images/cat_img2.png" },
-          { "id": 6, "title": "Spider-Man: No Way Home", "imgSrc": "/images/cat_img3.png" }
-          { "id": 5, "title": "The Batman", "imgSrc": "/images/cat_img2.png" },
-          { "id": 6, "title": "Spider-Man: No Way Home", "imgSrc": "/images/cat_img3.png" }
-        ]
-      },
-      {
-        "categoryTopic": "Must - Watch Shows",
-        "shows": [
-          { "id": 1, "title": "Avengers: Endgame", "imgSrc": "/images/cat_img.jpg" },
-          { "id": 2, "title": "Inception", "imgSrc": "/images/cat_img2.png" },
-          { "id": 3, "title": "Joker", "imgSrc": "/images/cat_img3.png" }
-          { "id": 3, "title": "Joker", "imgSrc": "/images/cat_img3.png" }
-          { "id": 3, "title": "Joker", "imgSrc": "/images/cat_img3.png" }
-        ]
-      }
+        {
+            "categoryTopic": "Our Genres",
+            "shows": [
+                {
+                    "id": 1,
+                    "title": "Stranger Things",
+                    "imgSrc": "/images/cat_img.jpg"
+                },
+                {
+                    "id": 2,
+                    "title": "Breaking Bad",
+                    "imgSrc": "/images/cat_img2.png"
+                },
+                {
+                    "id": 3,
+                    "title": "The Witcher",
+                    "imgSrc": "/images/cat_img3.png"
+                },
+                {
+                    "id": 4,
+                    "title": "House of the Dragon",
+                    "imgSrc": "/images/cat_img.jpg"
+                },
+                {
+                    "id": 5,
+                    "title": "The Mandalorian",
+                    "imgSrc": "/images/cat_img3.png"
+                }
+            ]
+        },
+        {
+            "categoryTopic": "Popular Top 10 In Genres",
+            "shows": [
+                {
+                    "id": 6,
+                    "title": "Game of Thrones",
+                    "imgSrc": "/images/cat_img3.png"
+                },
+                {
+                    "id": 7,
+                    "title": "Money Heist",
+                    "imgSrc": "/images/cat_img2.png"
+                },
+                {
+                    "id": 8,
+                    "title": "Squid Game",
+                    "imgSrc": "/images/cat_img.jpg"
+                },
+                {
+                    "id": 9,
+                    "title": "The Boys",
+                    "imgSrc": "/images/cat_img3.png"
+                },
+                {
+                    "id": 10,
+                    "title": "Dark",
+                    "imgSrc": "/images/cat_img2.png"
+                }
+            ]
+        },
+        {
+            "categoryTopic": "Trending Shows Now",
+            "shows": [
+                {
+                    "id": 11,
+                    "title": "The Last of Us",
+                    "imgSrc": "/images/cat_img.jpg"
+                },
+                {
+                    "id": 12,
+                    "title": "Peaky Blinders",
+                    "imgSrc": "/images/cat_img3.png"
+                },
+                {
+                    "id": 13,
+                    "title": "Better Call Saul",
+                    "imgSrc": "/images/cat_img2.png"
+                },
+                {
+                    "id": 14,
+                    "title": "Westworld",
+                    "imgSrc": "/images/cat_img.jpg"
+                },
+                {
+                    "id": 15,
+                    "title": "The Crown",
+                    "imgSrc": "/images/cat_img3.png"
+                }
+            ]
+        },
+        {
+            "categoryTopic": "New Released Shows",
+            "shows": [
+                {
+                    "id": 16,
+                    "title": "Wednesday",
+                    "imgSrc": "/images/cat_img.jpg"
+                },
+                {
+                    "id": 17,
+                    "title": "One Piece (Live Action)",
+                    "imgSrc": "/images/cat_img2.png"
+                },
+                {
+                    "id": 18,
+                    "title": "The Night Agent",
+                    "imgSrc": "/images/cat_img.jpg"
+                },
+                {
+                    "id": 19,
+                    "title": "Halo",
+                    "imgSrc": "/images/cat_img3.png"
+                },
+                {
+                    "id": 20,
+                    "title": "Foundation",
+                    "imgSrc": "/images/cat_img2.png"
+                }
+            ]
+        },
+        {
+            "categoryTopic": "Must-Watch Shows",
+            "shows": [
+                {
+                    "id": 21,
+                    "title": "Sherlock",
+                    "imgSrc": "/images/cat_img.jpg"
+                },
+                {
+                    "id": 22,
+                    "title": "True Detective",
+                    "imgSrc": "/images/cat_img2.png"
+                },
+                {
+                    "id": 23,
+                    "title": "Narcos",
+                    "imgSrc": "/images/cat_img3.png"
+                },
+                {
+                    "id": 24,
+                    "title": "Fargo",
+                    "imgSrc": "/images/cat_img2.png"
+                },
+                {
+                    "id": 25,
+                    "title": "Chernobyl",
+                    "imgSrc": "/images/cat_img.jpg"
+                }
+            ]
+        }
     ]
-  }
-  
+}

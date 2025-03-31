@@ -3,43 +3,52 @@
       {
         "categoryTopic": "Our Genres",
         "movies": [
-          { "id": 1, "title": "Avengers: Endgame", "imgSrc": "/images/cat_img.jpg" },
-          { "id": 2, "title": "Inception", "imgSrc": "/images/cat_img2.png" },
-          { "id": 3, "title": "Joker", "imgSrc": "/images/cat_img3.png" }
+          { "id": 1, "title": "The Dark Knight", "imgSrc": "/images/cat_img.jpg" },
+          { "id": 2, "title": "Interstellar", "imgSrc": "/images/cat_img2.png" },
+          { "id": 3, "title": "Gladiator", "imgSrc": "/images/cat_img3.png" },
+          { "id": 4, "title": "Mad Max: Fury Road", "imgSrc": "/images/cat_img.jpg" },
+          { "id": 5, "title": "The Matrix", "imgSrc": "/images/cat_img2.png" }
         ]
       },
       {
         "categoryTopic": "Popular Top 10 In Genres",
         "movies": [
-          { "id": 4, "title": "Dune: Part Two", "imgSrc": "/images/cat_img.jpg" },
-          { "id": 5, "title": "The Batman", "imgSrc": "/images/cat_img2.png" },
-          { "id": 6, "title": "Spider-Man: No Way Home", "imgSrc": "/images/cat_img3.png" }
+          { "id": 6, "title": "Dune: Part Two", "imgSrc": "/images/cat_img3.png" },
+          { "id": 7, "title": "The Batman", "imgSrc": "/images/cat_img.jpg" },
+          { "id": 8, "title": "Spider-Man: No Way Home", "imgSrc": "/images/cat_img2.png" },
+          { "id": 9, "title": "Avatar: The Way of Water", "imgSrc": "/images/cat_img3.png" },
+          { "id": 10, "title": "John Wick: Chapter 4", "imgSrc": "/images/cat_img.jpg" }
         ]
       },
       {
         "categoryTopic": "Trending Now",
         "movies": [
-          { "id": 1, "title": "Avengers: Endgame", "imgSrc": "/images/cat_img.jpg" },
-          { "id": 2, "title": "Inception", "imgSrc": "/images/cat_img2.png" },
-          { "id": 3, "title": "Joker", "imgSrc": "/images/cat_img3.png" }
+          { "id": 11, "title": "Oppenheimer", "imgSrc": "/images/cat_img2.png" },
+          { "id": 12, "title": "Barbie", "imgSrc": "/images/cat_img3.png" },
+          { "id": 13, "title": "Everything Everywhere All at Once", "imgSrc": "/images/cat_img.jpg" },
+          { "id": 14, "title": "Top Gun: Maverick", "imgSrc": "/images/cat_img2.png" },
+          { "id": 15, "title": "Mission: Impossible - Dead Reckoning Part One", "imgSrc": "/images/cat_img3.png" }
         ]
       },
       {
         "categoryTopic": "New Releases",
         "movies": [
-          { "id": 4, "title": "Dune: Part Two", "imgSrc": "/images/cat_img.jpg" },
-          { "id": 5, "title": "The Batman", "imgSrc": "/images/cat_img2.png" },
-          { "id": 6, "title": "Spider-Man: No Way Home", "imgSrc": "/images/cat_img3.png" }
+          { "id": 16, "title": "The Marvels", "imgSrc": "/images/cat_img.jpg" },
+          { "id": 17, "title": "Killers of the Flower Moon", "imgSrc": "/images/cat_img2.png" },
+          { "id": 18, "title": "Napoleon", "imgSrc": "/images/cat_img3.png" },
+          { "id": 19, "title": "Wonka", "imgSrc": "/images/cat_img.jpg" },
+          { "id": 20, "title": "The Equalizer 3", "imgSrc": "/images/cat_img2.png" }
         ]
       },
       {
         "categoryTopic": "Must - Watch Movies",
         "movies": [
-          { "id": 1, "title": "Avengers: Endgame", "imgSrc": "/images/cat_img.jpg" },
-          { "id": 2, "title": "Inception", "imgSrc": "/images/cat_img2.png" },
-          { "id": 3, "title": "Joker", "imgSrc": "/images/cat_img3.png" }
+          { "id": 21, "title": "Shawshank Redemption", "imgSrc": "/images/cat_img3.png" },
+          { "id": 22, "title": "Fight Club", "imgSrc": "/images/cat_img.jpg" },
+          { "id": 23, "title": "Forrest Gump", "imgSrc": "/images/cat_img2.png" },
+          { "id": 24, "title": "The Godfather", "imgSrc": "/images/cat_img3.png" },
+          { "id": 25, "title": "Pulp Fiction", "imgSrc": "/images/cat_img.jpg" }
         ]
       }
     ]
-  }
-  
+}
