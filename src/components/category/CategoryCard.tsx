@@ -6,15 +6,19 @@ import { useRouter } from "next/navigation";
 export const CategoryCard = ({
   categoryName,
   imgSrc,
+  type
 }: {
   categoryName: string;
   imgSrc: StaticImageData;
+  type: "movies" | "shows";
 }) => {
   const router = useRouter();
-  
+
   return (
     <div className="rounded-lg cursor-pointer category-card w-full h-auto bg-black-10 p-5 border border-black-15 flex flex-col gap-3 "
-    onClick={() => router.push(`/movies/${categoryName.replace(/\s+/g, "-").toLowerCase()}`)}
+    onClick={() =>
+      router.push(`/${type}/${categoryName.replace(/\s+/g, "-").toLowerCase()}`)
+    }
     >
       <span>
         <Image src={imgSrc} className="w-full" width={300} height={300} alt="right_icon" />

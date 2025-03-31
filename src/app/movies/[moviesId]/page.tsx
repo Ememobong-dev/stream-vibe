@@ -39,7 +39,7 @@ const MoviesSinglePage = () => {
       <Navbar />
       <Header
         headerImg="singleMoviesHeader"
-        headerTitle={moviesId ?? "Kantara"}
+        headerTitle={moviesId}
         headerDescription="A fiery young man clashes with an unflinching forest officer in a south Indian village where spirituality, fate and folklore rule the lands."
       />
       <div className="px-14 mt-28">
@@ -208,9 +208,6 @@ const MoviesSinglePage = () => {
                       </p>
                     </div>
                   </SinglePageCards>
-                </div>
-                <div className="flex justify-center items-center mt-3">
-                  <CarouselButtons />
                 </div>
               </SinglePageCards>
             </div>

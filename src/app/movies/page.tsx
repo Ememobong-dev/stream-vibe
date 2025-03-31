@@ -57,6 +57,7 @@ const Movies = () => {
                   key={movie.id}
                   categoryName={movie.title}
                   imgSrc={movie.imgSrc}
+                  type="movies"
                 />
               ))}
             </MoviesCategoryList>
@@ -74,6 +75,7 @@ const Movies = () => {
                   key={show.id}
                   categoryName={show.title}
                   imgSrc={show.imgSrc}
+                  type="shows"
                 />
               ))}
             </MoviesCategoryList>
