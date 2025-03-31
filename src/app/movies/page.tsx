@@ -5,6 +5,10 @@ import { MoviesCategoryList } from "@/src/components/moviesBorderWrapper/MoviesC
 import { MoviesListWrapper } from "@/src/components/moviesBorderWrapper/MoviesListWrapper";
 import { Navbar } from "@/src/components/nav/Navbar";
 import React from "react";
+import cat_img1 from "@/public/images/cat_img.jpg";
+import cat_img2 from "@/public/images/cat_img2.png";
+import cat_img3 from "@/public/images/cat_img3.png";
+import { CategoryCard } from "@/src/components/category/CategoryCard";
 
 const Movies = () => {
   return (
@@ -18,21 +22,61 @@ const Movies = () => {
       <div>
         <MoviesListWrapper movieCategory="Movies">
           <div>
-           <MoviesCategoryList categoryTopic="Our Genres" />
-           <MoviesCategoryList categoryTopic="Popular Top 10 In Genres" />
-           <MoviesCategoryList categoryTopic="Trending Now" />
-           <MoviesCategoryList categoryTopic="New Releases" />
-           <MoviesCategoryList categoryTopic="Must - Watch Movies" />
+            <MoviesCategoryList categoryTopic="Our Genres">
+              <CategoryCard categoryName="Action" imgSrc={cat_img1} />
+              <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
+              <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
+              <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
+              <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
+            </MoviesCategoryList>
+
+       
+
           </div>
         </MoviesListWrapper>
 
         <MoviesListWrapper movieCategory="Show">
           <div>
-           <MoviesCategoryList categoryTopic="Our Genres" />
-           <MoviesCategoryList categoryTopic="Popular Top 10 In Genres" />
-           <MoviesCategoryList categoryTopic="Trending Now" />
-           <MoviesCategoryList categoryTopic="New Releases" />
-           <MoviesCategoryList categoryTopic="Must - Watch Movies" />
+            <MoviesCategoryList categoryTopic="Our Genres">
+              <CategoryCard categoryName="Action" imgSrc={cat_img1} />
+              <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
+              <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
+              <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
+              <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
+            </MoviesCategoryList>
+
+            <MoviesCategoryList categoryTopic="Popular Top 10 In Genres">
+              <CategoryCard categoryName="Action" imgSrc={cat_img1} />
+              <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
+              <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
+              <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
+              <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
+            </MoviesCategoryList>
+
+            <MoviesCategoryList categoryTopic="Trending Now">
+              <CategoryCard categoryName="Action" imgSrc={cat_img1} />
+              <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
+              <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
+              <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
+              <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
+            </MoviesCategoryList>
+
+            <MoviesCategoryList categoryTopic="New Releases">
+              <CategoryCard categoryName="Action" imgSrc={cat_img1} />
+              <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
+              <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
+              <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
+              <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
+            </MoviesCategoryList>
+
+            <MoviesCategoryList categoryTopic="Must - Watch Movies">
+              <CategoryCard categoryName="Action" imgSrc={cat_img1} />
+              <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
+              <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
+              <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
+              <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
+            </MoviesCategoryList>
+
           </div>
         </MoviesListWrapper>
       </div>

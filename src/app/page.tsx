@@ -19,34 +19,10 @@ import { DeviceServicesCard } from "../components/Cards/DeviceServicesCard";
 import { Footer } from "../components/footer/Footer";
 import { Banner1 } from "../components/banners/Banner1";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
 import Faq from "../components/faq/Faq";
 import { Plans } from "../components/faq/PlansArea/Plans";
 
 export default function Home() {
-  const [cardWidth, setCardWidth] = useState(0);
-
-  const scrollRef = useRef(null);
-
-  useEffect(() => {
-    if (scrollRef.current) {
-      const firstCard = scrollRef.current.querySelector(".category-card");
-      if (firstCard) {
-        setCardWidth(firstCard.offsetWidth + 12); // 12px accounts for the gap
-      }
-    }
-  }, []);
-
-  const handleScroll = (direction: string) => {
-    if (scrollRef.current && cardWidth > 0) {
-      const scrollAmount = cardWidth * 5; // Scroll 5 cards at a time
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <div>
       <Navbar />
@@ -83,26 +59,16 @@ export default function Home() {
             subText="Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new"
           />
 
-          <CarouselButtons onScroll={handleScroll} />
+          <CarouselButtons />
         </div>
 
-        <div
-          ref={scrollRef}
-          className="flex  gap-3 overflow-x-scroll scroll-smooth"
-        >
+        <div className="flex  gap-3 overflow-x-scroll scroll-smooth carouselScroll">
           <CategoryCard categoryName="Action" imgSrc={cat_img1} />
           <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
           <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
           <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
           <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
-          <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
-          <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
-          <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
-          <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
-          <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
-          <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
-          <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
-          <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
+        
         </div>
       </div>
 

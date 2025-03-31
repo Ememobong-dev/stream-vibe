@@ -114,3 +114,16 @@ body {
   border-inline-start: 1px solid #262626 !important;
   border-top: 1px solid #262626 !important;
 }
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.carouselScroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.carouselScroll {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+

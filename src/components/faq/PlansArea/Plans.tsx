@@ -56,8 +56,7 @@ export const Plans = () => {
     },
   ];
 
-
-  console.log("PLANSDATA" , plansData.filter( (item) => item.planType === activePlanType));
+//   console.log("PLANSDATA" , plansData.filter( (item) => item.planType === activePlanType));
 
   return (
     <div className="flex flex-col gap-14 w-full">
