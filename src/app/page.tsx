@@ -169,7 +169,7 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-2  gap-x-24 gap-y-10">
-          <Accordian num="01" question="What is StreamVibe?" />
+          <Accordian num="01" question="What is StreamVibe?" answers="        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fuga voluptatibus veritatis deleniti beatae! Consequuntur corporis esse nostrum, explicabo maxime laudantium iusto tempora sint, molestiae minima reprehenderit sequi amet laboriosam?" />
           <Accordian num="02" question="How much does StreamVibe cost?" />
           <Accordian
             num="03"
