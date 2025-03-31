@@ -26,7 +26,6 @@ import langIcon from "@/public/icons/language-icon.svg";
 import ratingIcon from "@/public/icons/ratingStar.svg";
 import genreIcon from "@/public/icons/genreIcon.svg";
 import emptyStar from "@/public/icons/emptyStar.svg";
-import { CarouselButtons } from "@/src/components/button/CarouselButtons";
 import { Banner1 } from "@/src/components/banners/Banner1";
 import { Tags } from "@/src/components/tags/Tags";
 import { Footer } from "@/src/components/footer/Footer";

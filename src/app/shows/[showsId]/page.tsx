@@ -35,7 +35,6 @@ import episode2 from "@/public/images/shows--episode2.png";
 import episode3 from "@/public/images/shows--episode3.png";
 import episode4 from "@/public/images/shows--episode4.png";
 import episode5 from "@/public/images/shows--episode5.png";
-import { CarouselButtons } from "@/src/components/button/CarouselButtons";
 import { Banner1 } from "@/src/components/banners/Banner1";
 import { Tags } from "@/src/components/tags/Tags";
 import { EpisodeArea } from "@/src/components/shows-episodes/EpisodeArea";
@@ -301,9 +300,6 @@ const ShowsSinglePage = () => {
                       </p>
                     </div>
                   </SinglePageCards>
-                </div>
-                <div className="flex justify-center items-center mt-3">
-                  <CarouselButtons />
                 </div>
               </SinglePageCards>
             </div>
