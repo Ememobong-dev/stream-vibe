@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "../components/button/Button";
 import { TextArea } from "../components/home-second-section/TextArea";
 import { Navbar } from "../components/nav/Navbar";
@@ -18,8 +20,38 @@ import { Accordian } from "../components/accordian/Accordian";
 import { PlansCard } from "../components/Cards/PlansCard";
 import { Footer } from "../components/footer/Footer";
 import { Banner1 } from "../components/banners/Banner1";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
+  const [cardWidth, setCardWidth] = useState(0);
+
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      const firstCard = scrollRef.current.querySelector(".category-card");
+      if (firstCard) {
+        setCardWidth(firstCard.offsetWidth + 12); // 12px accounts for the gap
+      }
+    }
+
+
+  }, [])
+
+
+  const handleScroll = (direction: string) => {
+    if (scrollRef.current && cardWidth > 0) {
+      const scrollAmount = cardWidth * 5; // Scroll 5 cards at a time
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+
+  }
+
+
   return (
     <div>
       <Navbar />
@@ -39,7 +71,13 @@ export default function Home() {
           </p>
         </span>
         <div>
-          <Button text="Start Watching Now" icon={playIcon} variant="filled" />
+          <Link href={"/movies"}>
+            <Button
+              text="Start Watching Now"
+              icon={playIcon}
+              variant="filled"
+            />
+          </Link>
         </div>
       </div>
       {/* Second Section */}
@@ -50,11 +88,19 @@ export default function Home() {
             subText="Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new"
           />
 
-          <CarouselButtons />
+          <CarouselButtons onScroll={handleScroll} />
         </div>
 
-        <div className="flex  gap-3">
+        <div ref={scrollRef} className="flex  gap-3 overflow-x-scroll scroll-smooth">
           <CategoryCard categoryName="Action" imgSrc={cat_img1} />
+          <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
+          <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
+          <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
+          <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
+          <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
+          <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
+          <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
+          <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
           <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
           <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
           <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
@@ -117,13 +163,18 @@ export default function Home() {
             subText="Got questions? We've got answers! Check out our FAQ section to find answers to the most common questions about StreamVibe."
           />
 
-          <Button variant="filled" text="Ask a Question" />
+          <Link href={"/support"}>
+            <Button variant="filled" text="Ask a Question" />
+          </Link>
         </div>
 
         <div className="grid grid-cols-2  gap-x-24 gap-y-10">
           <Accordian num="01" question="What is StreamVibe?" />
           <Accordian num="02" question="How much does StreamVibe cost?" />
-          <Accordian num="03" question="What content is available on StreamVibe?" />
+          <Accordian
+            num="03"
+            question="What content is available on StreamVibe?"
+          />
           <Accordian num="04" question="How can I watch StreamVibe?" />
           <Accordian num="05" question="How do I sign up for StreamVibe?" />
           <Accordian num="06" question="What is the StreamVibe free trial?" />
@@ -173,7 +224,7 @@ export default function Home() {
       </div>
 
       {/* SIXTH SECTION */}
-     <Banner1 />
+      <Banner1 />
 
       <Footer />
     </div>

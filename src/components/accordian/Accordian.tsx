@@ -14,7 +14,7 @@ export const Accordian = ({
 }) => {
   return (
     <div>
-      <div className="py-4 flex justify-between items-center">
+      <div className="py-4 cursor-pointer flex justify-between items-center" onClick={() => {}}>
         <div className={`flex items-center gap-4`}>
           <div className="flex justify-center items-center text-white bg-black-12 border border-black-15 w-10 h-10 rounded-lg p-2">
             {num}
