@@ -16,12 +16,13 @@ import cat_img3 from "@/public/images/cat_img3.png";
 import { CategoryCard } from "../components/category/CategoryCard";
 import { CarouselButtons } from "../components/button/CarouselButtons";
 import { DeviceServicesCard } from "../components/Cards/DeviceServicesCard";
-import { Accordian } from "../components/accordian/Accordian";
+import { Accordian } from "../components/faq/Accordian";
 import { PlansCard } from "../components/Cards/PlansCard";
 import { Footer } from "../components/footer/Footer";
 import { Banner1 } from "../components/banners/Banner1";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import Faq from "../components/faq/Faq";
 
 export default function Home() {
   const [cardWidth, setCardWidth] = useState(0);
@@ -168,17 +169,9 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2  gap-x-24 gap-y-10">
-          <Accordian num="01" question="What is StreamVibe?" answers="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi fuga voluptatibus veritatis deleniti beatae! Consequuntur corporis esse nostrum, explicabo maxime laudantium iusto tempora sint, molestiae minima reprehenderit sequi amet laboriosam?" />
-          <Accordian num="02" question="How much does StreamVibe cost?" />
-          <Accordian
-            num="03"
-            question="What content is available on StreamVibe?"
-          />
-          <Accordian num="04" question="How can I watch StreamVibe?" />
-          <Accordian num="05" question="How do I sign up for StreamVibe?" />
-          <Accordian num="06" question="What is the StreamVibe free trial?" />
-        </div>
+        <Faq />
+
+
       </div>
 
       {/* Fifth Section */}

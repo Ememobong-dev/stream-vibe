@@ -6,9 +6,10 @@ import supportImg from "@/public/images/support-headerImg.png";
 import { SinglePageCards } from "@/src/components/Cards/SinglePageCards";
 import { Button } from "@/src/components/button/Button";
 import { TextArea } from "@/src/components/home-second-section/TextArea";
-import { Accordian } from "@/src/components/accordian/Accordian";
+import { Accordian } from "@/src/components/faq/Accordian";
 import { Banner1 } from "@/src/components/banners/Banner1";
 import { Footer } from "@/src/components/footer/Footer";
+import Faq from "@/src/components/faq/Faq";
 
 const Support = () => {
   return (
@@ -134,17 +135,7 @@ const Support = () => {
             <Button variant="filled" text="Ask a Question" />
           </div>
 
-          <div className="grid grid-cols-2  gap-x-24 gap-y-10">
-            <Accordian num="01" question="What is StreamVibe?" />
-            <Accordian num="02" question="How much does StreamVibe cost?" />
-            <Accordian
-              num="03"
-              question="What content is available on StreamVibe?"
-            />
-            <Accordian num="04" question="How can I watch StreamVibe?" />
-            <Accordian num="05" question="How do I sign up for StreamVibe?" />
-            <Accordian num="06" question="What is the StreamVibe free trial?" />
-          </div>
+         <Faq />
         </div>
 
         {/* Banner */}
