@@ -1,16 +1,42 @@
+"use client";
+
 import { Banner1 } from "@/src/components/banners/Banner1";
 import { Footer } from "@/src/components/footer/Footer";
 import { Header } from "@/src/components/headerWrapper/Header";
 import { MoviesCategoryList } from "@/src/components/moviesBorderWrapper/MoviesCategoryList";
 import { MoviesListWrapper } from "@/src/components/moviesBorderWrapper/MoviesListWrapper";
 import { Navbar } from "@/src/components/nav/Navbar";
-import React from "react";
-import cat_img1 from "@/public/images/cat_img.jpg";
-import cat_img2 from "@/public/images/cat_img2.png";
-import cat_img3 from "@/public/images/cat_img3.png";
+import React, { useEffect, useState } from "react";
 import { CategoryCard } from "@/src/components/category/CategoryCard";
+import axios from "axios";
 
 const Movies = () => {
+  const [moviesCategories, setMoviesCategories] = useState([]);
+  const [showCategories, setShowCategories] = useState([]);
+
+  const moviesCategoryList = async () => {
+    try {
+      const res = await axios.get("/data/moviesData.json");
+      setMoviesCategories(res.data.categories);
+    } catch (e) {
+      console.log("Error fetching data:", e);
+    }
+  };
+
+  const showsCategoryList = async () => {
+    try {
+      const res = await axios.get("/data/showsData.json");
+      setShowCategories(res.data.categories);
+    } catch (e) {
+      console.log("Error fetching data:", e);
+    }
+  };
+
+  useEffect(() => {
+    moviesCategoryList();
+    showsCategoryList();
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -21,63 +47,37 @@ const Movies = () => {
       />
       <div>
         <MoviesListWrapper movieCategory="Movies">
-          <div>
-            <MoviesCategoryList categoryTopic="Our Genres">
-              <CategoryCard categoryName="Action" imgSrc={cat_img1} />
-              <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
-              <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
-              <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
-              <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
+          {moviesCategories.map((category, index) => (
+            <MoviesCategoryList
+              key={index}
+              categoryTopic={category.categoryTopic}
+            >
+              {category.movies.map((movie) => (
+                <CategoryCard
+                  key={movie.id}
+                  categoryName={movie.title}
+                  imgSrc={movie.imgSrc}
+                />
+              ))}
             </MoviesCategoryList>
-
-       
-
-          </div>
+          ))}
         </MoviesListWrapper>
 
-        <MoviesListWrapper movieCategory="Show">
-          <div>
-            <MoviesCategoryList categoryTopic="Our Genres">
-              <CategoryCard categoryName="Action" imgSrc={cat_img1} />
-              <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
-              <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
-              <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
-              <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
+        <MoviesListWrapper movieCategory="Shows">
+          {showCategories.map((category, index) => (
+            <MoviesCategoryList
+              key={index}
+              categoryTopic={category.categoryTopic}
+            >
+              {category.shows.map((show) => (
+                <CategoryCard
+                  key={show.id}
+                  categoryName={show.title}
+                  imgSrc={show.imgSrc}
+                />
+              ))}
             </MoviesCategoryList>
-
-            <MoviesCategoryList categoryTopic="Popular Top 10 In Genres">
-              <CategoryCard categoryName="Action" imgSrc={cat_img1} />
-              <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
-              <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
-              <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
-              <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
-            </MoviesCategoryList>
-
-            <MoviesCategoryList categoryTopic="Trending Now">
-              <CategoryCard categoryName="Action" imgSrc={cat_img1} />
-              <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
-              <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
-              <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
-              <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
-            </MoviesCategoryList>
-
-            <MoviesCategoryList categoryTopic="New Releases">
-              <CategoryCard categoryName="Action" imgSrc={cat_img1} />
-              <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
-              <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
-              <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
-              <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
-            </MoviesCategoryList>
-
-            <MoviesCategoryList categoryTopic="Must - Watch Movies">
-              <CategoryCard categoryName="Action" imgSrc={cat_img1} />
-              <CategoryCard categoryName="Adventure" imgSrc={cat_img2} />
-              <CategoryCard categoryName="Comedy" imgSrc={cat_img3} />
-              <CategoryCard categoryName="Drama" imgSrc={cat_img1} />
-              <CategoryCard categoryName="Horrow" imgSrc={cat_img2} />
-            </MoviesCategoryList>
-
-          </div>
+          ))}
         </MoviesListWrapper>
       </div>
       <Banner1 />

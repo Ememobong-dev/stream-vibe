@@ -2,7 +2,7 @@
     "categories": [
       {
         "categoryTopic": "Our Genres",
-        "movies": [
+        "shows": [
           { "id": 1, "title": "Avengers: Endgame", "imgSrc": "/images/cat_img.jpg" },
           { "id": 2, "title": "Inception", "imgSrc": "/images/cat_img2.png" },
           { "id": 3, "title": "Joker", "imgSrc": "/images/cat_img3.png" }
@@ -10,7 +10,7 @@
       },
       {
         "categoryTopic": "Popular Top 10 In Genres",
-        "movies": [
+        "shows": [
           { "id": 4, "title": "Dune: Part Two", "imgSrc": "/images/cat_img.jpg" },
           { "id": 5, "title": "The Batman", "imgSrc": "/images/cat_img2.png" },
           { "id": 6, "title": "Spider-Man: No Way Home", "imgSrc": "/images/cat_img3.png" }
@@ -18,7 +18,7 @@
       },
       {
         "categoryTopic": "Trending Shows Now",
-        "movies": [
+        "shows": [
           { "id": 1, "title": "Avengers: Endgame", "imgSrc": "/images/cat_img.jpg" },
           { "id": 2, "title": "Inception", "imgSrc": "/images/cat_img2.png" },
           { "id": 3, "title": "Joker", "imgSrc": "/images/cat_img3.png" }
@@ -26,7 +26,7 @@
       },
       {
         "categoryTopic": "New Releasesd Shows",
-        "movies": [
+        "shows": [
           { "id": 4, "title": "Dune: Part Two", "imgSrc": "/images/cat_img.jpg" },
           { "id": 5, "title": "The Batman", "imgSrc": "/images/cat_img2.png" },
           { "id": 6, "title": "Spider-Man: No Way Home", "imgSrc": "/images/cat_img3.png" }
@@ -34,7 +34,7 @@
       },
       {
         "categoryTopic": "Must - Watch Shows",
-        "movies": [
+        "shows": [
           { "id": 1, "title": "Avengers: Endgame", "imgSrc": "/images/cat_img.jpg" },
           { "id": 2, "title": "Inception", "imgSrc": "/images/cat_img2.png" },
           { "id": 3, "title": "Joker", "imgSrc": "/images/cat_img3.png" }
